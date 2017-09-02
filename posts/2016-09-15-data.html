@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content - Styx Site</title>
+<link href="https://styx-static.github.io/styx-theme-hyde/feed.xml" rel="alternate" type="application/atom+xml" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet" type="text/css" />
+<link href="https://styx-static.github.io/styx-theme-hyde/css/nix.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top font-header" id="navbar">
+<div class="container-fluid">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" id="green-terminal" href="https://styx-static.github.io/styx-theme-hyde/">Styx Site</a>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="https://styx-static.github.io/styx-theme-hyde/about.html">~/about</a></li>
+<li><a href="https://styx-static.github.io/styx-theme-hyde/posts/index.html">~/posts</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container wrapper">
+<h1>Content</h1>
+<span class="post-date">15 Sep, 2016</span>
+<div class="post-content">
+<p>Content, also called as data in <code>site.nix</code> or the documentation, refers to the content used to generate a site.</p>
+
+<p>Multiple formats are supported:</p>
+
+<ul>
+<li>Markdown</li>
+<li>Asciidoc</li>
+<li>Nix</li>
+</ul>
+
+<p>Multiple data formats can be mixed without trouble in the same site.</p>
+
+<h2 id="nixdata">Nix data</h2>
+
+<p>Nix data can be used to create structured data, example from the agency theme data used for generating team information:</p>
+
+<pre><code class="nix">[
+  {
+    img = &quot;1.jpg&quot;;
+    name = &quot;Kay Garland&quot;;
+    position = &quot;Lead Designer&quot;;
+    social = [
+      { type = &quot;twitter&quot;; link = &quot;#&quot;; }
+      { type = &quot;facebook&quot;; link = &quot;#&quot;; }
+      { type = &quot;linkedin&quot;; link = &quot;#&quot;; }
+    ];
+  }
+  {
+    img = &quot;2.jpg&quot;;
+    name = &quot;Larry Parker&quot;;
+    position = &quot;Lead Marketer&quot;;
+    social = [
+      { type = &quot;twitter&quot;; link = &quot;#&quot;; }
+      { type = &quot;facebook&quot;; link = &quot;#&quot;; }
+      { type = &quot;linkedin&quot;; link = &quot;#&quot;; }
+    ];
+  }
+]
+</code></pre>
+
+<p>Note: Nix data can be also be declared as a function so parameters can be passed to it.</p>
+
+<h2 id="markupdata">Markup data</h2>
+
+<p>Markup data is data written in markdown or asciidoc format.</p>
+
+<p>Each format is fully supported and allow some extra features.</p>
+
+<h3 id="multipagecontent">Multipage content</h3>
+
+<p>The page separator <code>&lt;&lt;&lt;</code> can be used to split a markup file in multiple pages:</p>
+
+<pre><code class="markdown">## Lorem ipsum
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+&lt;&lt;&lt;
+
+## Nulla facilisi
+
+Sed turpis felis, luctus ac mauris nec, sollicitudin commodo urna. Etiam eleifend interdum velit, quis egestas elit commodo nec.
+
+&lt;&lt;&lt; 
+
+## Duis ex magna
+
+Duis ex magna, ultrices non mauris eget, auctor dictum mi. In porta dictum finibus. Nulla ultricies nunc ut risus maximus, non maximus nunc elementum.
+</code></pre>
+
+<hr />
+
+<p>This page is a multipage post, use the navigation below to access the next page.</p>
+
+
+<nav aria-label="...">
+<ul class="pager">
+
+<li class="next"><a href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-15-data-2.html">Content <span aria-hidden="true">&rarr;</span></a></li>
+</ul>
+</nav>
+ 
+</div>
+
+</div>
+<footer class="footer text-center">
+  <p>&copy; 2017. All rights reserved. 
+</p>
+</footer>
+<script crossorigin="anonymous" src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script crossorigin="anonymous" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/nix.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

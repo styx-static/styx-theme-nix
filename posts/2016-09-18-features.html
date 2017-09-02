@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features - Styx Site</title>
+<link href="https://styx-static.github.io/styx-theme-hyde/feed.xml" rel="alternate" type="application/atom+xml" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Roboto|Montserrat|Concert+One" rel="stylesheet" type="text/css" />
+<link href="https://styx-static.github.io/styx-theme-hyde/css/nix.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top font-header" id="navbar">
+<div class="container-fluid">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" id="green-terminal" href="https://styx-static.github.io/styx-theme-hyde/">Styx Site</a>
+</div>
+<div class="collapse navbar-collapse" id="navbar-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="https://styx-static.github.io/styx-theme-hyde/about.html">~/about</a></li>
+<li><a href="https://styx-static.github.io/styx-theme-hyde/posts/index.html">~/posts</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container wrapper">
+<h1>Features</h1>
+<span class="post-date">18 Sep, 2016</span>
+<div class="post-content">
+<h2 id="cleanseparationofconcerns">Clean separation of concerns</h2>
+
+<p>A styx site is mainly managed in a single <code>site.nix</code> file. <code>site.nix</code> is divided in multiple parts, each one handling a special aspect of the site.</p>
+
+<ul>
+<li>In the <code>data</code> section, external data files are fetched and data structures are declared.</li>
+<li>The <code>pages</code> section controls the page that will be generated.</li>
+</ul>
+
+<p>The configuration of a site is managed in an external <code>conf.nix</code>, where any of the used themes configuration interface can be used.</p>
+
+<h2 id="themes">Themes</h2>
+
+<p>Themes are the main way to create and customize Styx sites, themes can provide:</p>
+
+<ul>
+<li>Templates</li>
+<li>Static files</li>
+<li>Configuration interface</li>
+<li>Function library</li>
+</ul>
+
+<p>Themes can be combined in a modular way, making it is easy to personalize or extend an existing theme.</p>
+
+<p>The <code>generic-templates</code> theme provide a template framework that can be used for quick website prototyping.</p>
+
+<p>Themes from the <code>styx-themes</code> package set can be used directly without needing to be downloaded.</p>
+
+<h2 id="content">Content</h2>
+
+<p>Styx handle markdown and asciidoc content. Nix can also be used for structured data.</p>
+
+<p>Markup files can declare metadata (front-matter) and easily declare introduction or multiples pages with dedicated separators.</p>
+
+<p>Nix code can also be called in markup file, and this can be used to easily include external medias in content.</p>
+
+<h2 id="templateengine">Template engine</h2>
+
+<p>Styx templates are written in the same language <code>site.nix</code> is written, the nix expression language.<br/>
+A template is just a nix function returning text or an attribute set.</p>
+
+<p>This make it very easy to include other template as it is just calling that template function:</p>
+
+<pre><code class="nix">''
+  &amp;lt;h1&amp;gt;Foo&amp;lt;/h1&amp;gt;
+  ${templates.bar}
+''
+</code></pre>
+
+<p>Template functions can take arguments, so a list of post can be generated in the following fashion:</p>
+
+<pre><code class="nix">''
+  &amp;lt;h1&amp;gt;Foo&amp;lt;/h1&amp;gt;
+  ${mapTemplate templates.posts.list page.posts}
+''
+</code></pre>
+
+<p>Every theme can provide templates functions, and new library functions that can be used in templates.</p>
+
+<h2 id="configurationinterface">Configuration interface</h2>
+
+<p>Each theme can provide a configuration interface that can be used in the site configuration file.
+A theme configuration can profide extra information such as types and documentation.
+This allows to type-check configuration and to generate documentation for themes.</p>
+
+<h2 id="interactivedebugging">Interactive debugging</h2>
+
+<p><code>nix-repl</code> can be used to inspect interactively any variable of a <code>site.nix</code> file.<br/>
+Pages can be generated and the site can even be built from the repl.</p>
+
+<pre><code class="sh">$ nix-repl &quot;&lt;nixpkgs&gt;&quot;
+
+nix-repl&gt; site = callPackage (import ./site.nix) {}
+
+nix-repl&gt; site.conf
+{ siteUrl = &quot;https://styx-static.github.io/styx-theme-showcase&quot;; theme = { ... }; }
+</code></pre>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Styx is well documented, <code>styx doc</code> will lanch the documentation for the current version in a browser.
+It is also possible to generate a documentation for a site by using the <code>styx site-doc</code> command in the site directory.</p>
+
+<h2 id="deploymentfacilities">Deployment facilities</h2>
+
+<p>Styx has a <code>deploy</code> sub-command that can be used to easily deploy a site to GitHub pages.
+Any styx site can also be deployed with NixOps.</p>
+
+
+ 
+</div>
+
+</div>
+<footer class="footer text-center">
+  <p>&copy; 2017. All rights reserved. 
+</p>
+</footer>
+<script crossorigin="anonymous" src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script crossorigin="anonymous" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/nix.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
