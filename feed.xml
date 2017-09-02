@@ -4,9 +4,9 @@
   
   <generator>Styx</generator>
   <updated>2016-09-19T00:00:00Z</updated>
-  <id>https://styx-static.github.io/styx-theme-hyde/feed.xml</id>
-  <link href="https://styx-static.github.io/styx-theme-hyde/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="https://styx-static.github.io/styx-theme-hyde/" rel="alternate"/>
+  <id>https://styx-static.github.io/styx-theme-nix/feed.xml</id>
+  <link href="https://styx-static.github.io/styx-theme-nix/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/" rel="alternate"/>
   <author>
   <name>Styx</name>
 </author>
@@ -14,10 +14,10 @@
   
   
   <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-19-blog-tutorial.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-19-blog-tutorial.html</id>
   <title>Blog tutorial</title>
   <updated>2016-09-19T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-19-blog-tutorial.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-19-blog-tutorial.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <div class="paragraph">
@@ -499,10 +499,10 @@ It is possible to set attributes to every page when converting our page set to a
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-18-features.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-18-features.html</id>
   <title>Features</title>
   <updated>2016-09-18T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-18-features.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-18-features.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This post introduce Styx main features.</p>
@@ -604,10 +604,10 @@ Any styx site can also be deployed with NixOps.</p>
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-17-media.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-17-media.html</id>
   <title>Embedded media</title>
   <updated>2016-09-17T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-17-media.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-17-media.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This post introduce how to embed media inside styx content.</p>
@@ -680,10 +680,10 @@ Any styx site can also be deployed with NixOps.</p>
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-16-themes.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-16-themes.html</id>
   <title>Themes</title>
   <updated>2016-09-16T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-16-themes.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-16-themes.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This post introduce themes, a central concept in styx.</p>
@@ -763,10 +763,10 @@ These configuration options can be used and changed in the site <code>conf.nix</
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-15-data.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-15-data.html</id>
   <title>Content</title>
   <updated>2016-09-15T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-15-data.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-15-data.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This post introduce how to manage content in styx.</p>
@@ -853,10 +853,10 @@ Duis ex magna, ultrices non mauris eget, auctor dictum mi. In porta dictum finib
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-14-pages.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-14-pages.html</id>
   <title>Pages</title>
   <updated>2016-09-14T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-14-pages.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-14-pages.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>This post introduce how a styx site site generate pages.</p>
@@ -922,10 +922,10 @@ The generated page content is output in the page <code>path</code> file.</p>
 </entry>
 
 <entry>
-  <id>https://styx-static.github.io/styx-theme-hyde/posts/2016-09-13-drafts.html</id>
+  <id>https://styx-static.github.io/styx-theme-nix/posts/2016-09-13-drafts.html</id>
   <title>Drafts</title>
   <updated>2016-09-13T00:00:00Z</updated>
-  <link href="https://styx-static.github.io/styx-theme-hyde/posts/2016-09-13-drafts.html" rel="alternate" type="text/html"/>
+  <link href="https://styx-static.github.io/styx-theme-nix/posts/2016-09-13-drafts.html" rel="alternate" type="text/html"/>
   <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Drafts pages are only rendered when the <code>--draft</code> is passed to the styx command.
